@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/          # ✅ On envoie uniquement le build
-          server-dir: public_html/  # ✅ Cible : public_html sur Hostinger
+          server-dir: .public_html/  # ✅ Cible : public_html sur Hostinger
