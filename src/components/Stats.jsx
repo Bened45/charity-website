@@ -34,12 +34,12 @@ const Stats = () => {
   });
 
   return (
-    <div className="py-20 bg-light/30">
+    <div className="py-20 bg-green-500">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-primary">Notre Impact en Chiffres</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-50">Notre Impact en Chiffres</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {dynamicStats.map(stat => (
-            <div key={stat.id} className="p-6 bg-white/60 backdrop-blur-md border border-white/30 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+            <div key={stat.id} className="p-6 bg-white backdrop-blur-md border border-white/30 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
               <p className="text-5xl font-extrabold text-secondary">
                 <AnimatedNumber value={stat.value} />
               </p>
