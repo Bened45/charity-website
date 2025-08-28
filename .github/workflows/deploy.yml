@@ -30,5 +30,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/          # ✅ On envoie uniquement le build
-          server-dir: .public_html/  # ✅ Cible : public_html sur Hostinger
+          local-dir: dist/          # dossier de build
+          server-dir: public_html/  # dossier racine chez Hostinger
+          dangerous-clean-slate: true  # ⚠️ supprime tout avant upload
+          log-level: verbose         # 🔥 affiche chaque fichier envoyé
