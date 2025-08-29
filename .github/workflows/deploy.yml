@@ -26,13 +26,17 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      
+
+      - name: Deploy with Password
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          ssh_private_key: ""
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/          # dossier de build
-          server-dir: .public_html/  # dossier racine chez Hostinger
-          dangerous-clean-slate: true  #  supprime tout avant upload
-          log-level: verbose         #  affiche chaque fichier envoyé
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: ${{ secrets.FTP_PORT }}
+          local_path: ./dist
+          remote_path: .public_html/
+          sftp_only: false
+          delete_remote_files: true
