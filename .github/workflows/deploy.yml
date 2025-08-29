@@ -35,4 +35,5 @@ jobs:
           local-dir: dist/          # dossier de build
           server-dir: public_html/  # dossier racine chez Hostinger
           dangerous-clean-slate: true  #  supprime tout avant upload
+          state-name: public_html/.sync-state.json
           # log-level: verbose         #  affiche chaque fichier envoyé
