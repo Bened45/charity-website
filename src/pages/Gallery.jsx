@@ -1,8 +1,10 @@
 import React from 'react';
 import { gallery } from '../data';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,7 +26,7 @@ const Gallery = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        Galerie d'Images
+        {t('gallery.title')}
       </motion.h1>
       <motion.div 
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"

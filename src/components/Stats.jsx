@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useInView, useSpring, useMotionValue, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { stats as hardcodedStats, projects } from '../data'; // Import projects data
 
 const AnimatedNumber = ({ value }) => {
@@ -19,6 +20,7 @@ const AnimatedNumber = ({ value }) => {
 };
 
 const Stats = () => {
+  const { t } = useTranslation();
   // Calculate dynamic stats
   const totalRaised = projects.reduce((sum, project) => sum + project.raised, 0);
   const projectsFunded = projects.filter(project => project.raised >= project.goal).length;
@@ -36,7 +38,7 @@ const Stats = () => {
   return (
     <div className="py-20 bg-green-500">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-50">Notre Impact en lettre</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-50">{t('stats.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {dynamicStats.map(stat => (
             <div key={stat.id} className="p-6 bg-white backdrop-blur-md border border-white/30 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">

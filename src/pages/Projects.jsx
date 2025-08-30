@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { projects as mockProjects } from '../data';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -49,7 +51,7 @@ const Projects = () => {
   if (loading) {
     return (
       <div className="container mx-auto p-8 font-sans text-center text-primary">
-        <h1 className="text-4xl font-bold mb-12">Chargement des projets...</h1>
+        <h1 className="text-4xl font-bold mb-12">{t('projects.loading')}</h1>
         <div className="flex justify-center items-center">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
         </div>
@@ -60,13 +62,13 @@ const Projects = () => {
   if (error) {
     return (
       <div className="container mx-auto p-8 font-sans text-center text-red-600">
-        <h1 className="text-4xl font-bold mb-12">Erreur de chargement</h1>
-        <p className="text-lg">Une erreur est survenue : {error}</p>
+        <h1 className="text-4xl font-bold mb-12">{t('projects.errorTitle')}</h1>
+        <p className="text-lg">{t('projects.errorMessage', { error })}</p>
         <button 
           onClick={() => window.location.reload()} 
           className="mt-8 inline-block bg-secondary hover:bg-primary text-white font-bold py-3 px-8 rounded-full transform hover:scale-105 transition-transform duration-300"
         >
-          Réessayer
+          {t('projects.retryButton')}
         </button>
       </div>
     );
@@ -80,7 +82,7 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        Tous Nos Projets
+        {t('projects.title')}
       </motion.h1>
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
@@ -109,11 +111,11 @@ const Projects = () => {
                   ></motion.div>
                 </div>
                 <div className="flex justify-between text-sm text-text-primary mb-4">
-                  <span>{project.raised.toLocaleString()}€ collectés</span>
-                  <span>Objectif: {project.goal.toLocaleString()}€</span>
+                  <span>{t('projects.raised', { raised: project.raised.toLocaleString() })}</span>
+                  <span>{t('projects.goal', { goal: project.goal.toLocaleString() })}</span>
                 </div>
                 <div className={`text-sm font-bold ${project.status === 'En cours' ? 'text-yellow-500' : 'text-accent'}`}>
-                  Statut: {project.status}
+                  {t('projects.status', { status: project.status })}
                 </div>
               </div>
             </Link>

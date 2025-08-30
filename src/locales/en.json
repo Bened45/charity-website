@@ -1,0 +1,126 @@
+{
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "donate": "Donate",
+    "openMenu": "Open menu",
+    "logoAlt": "Blockchain BENIN Charity Logo"
+  },
+  "home": {
+    "title": "Blockchain BENIN Charity",
+    "subtitle": "Transparent, traceable, and impactful humanitarian actions through blockchain technology.",
+    "donate": "Donate",
+    "ourGoals": "Our Goals",
+    "socialHelp": "Social Support",
+    "socialHelpText": "Supporting disadvantaged populations through concrete and measurable social projects.",
+    "blockchainPromo": "Blockchain Promotion",
+    "blockchainPromoText": "Promoting the use of blockchain to ensure transparency and trust in social works.",
+    "mobilization": "Mobilization",
+    "mobilizationText": "Mobilizing Web3 and Web2 communities to contribute together to the common good.",
+    "recentProjects": "Our Recent Projects",
+    "learnMore": "Learn more",
+    "seeAllProjects": "See all projects",
+    "heroAlt": "Hero illustration"
+  },
+  "about": {
+    "title": "About Us",
+    "historyTitle": "Our History",
+    "historyText": "Blockchain BENIN Charity is the charitable branch of the Blockchain BENIN project. Born from the desire to put technology at the service of humanitarian aid, our organization uses the blockchain to guarantee transparent, traceable, and truly impactful actions. We believe that trust is the pillar of generosity, and we are committed to strengthening it with every project.",
+    "visionTitle": "Our Vision",
+    "visionText": "Our vision is twofold: on the one hand, to provide concrete and effective aid to vulnerable populations in Benin, and on the other hand, to become a key player in the popularization of blockchain technology, by demonstrating its potential for social good. We aspire to a future where every donor can track their donation and see its direct impact, thus strengthening the link between generosity and action.",
+    "teamTitle": "Our Dedicated Team"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "formTitle": "Send a message",
+    "formNameLabel": "Name",
+    "formEmailLabel": "Email",
+    "formMessageLabel": "Message",
+    "formSubmitButton": "Send",
+    "successMessage": "Thank you for your message! We will get back to you soon.",
+    "simulationMessage": "(This is a simulation, the form is not active.)",
+    "detailsTitle": "Our Contact Details",
+    "addressLabel": "Address:",
+    "addressValue": "Cotonou, Benin (Full address to come)",
+    "phoneLabel": "Phone:",
+    "phoneValue": "+229 XX XX XX XX",
+    "emailLabel": "Email:",
+    "emailValue": "contact@blockchainbenin.org",
+    "followUsTitle": "Follow us"
+  },
+  "donate": {
+    "title": "Support our actions",
+    "subtitle": "Your contribution is essential to help us achieve our goals. Choose an amount and a payment method below.",
+    "amountLabel": "Donation amount (€)",
+    "amountPlaceholder": "Enter an amount",
+    "mobileMoneyButton": "Mobile Money",
+    "cardButton": "Credit Card",
+    "cryptoButton": "Cryptocurrencies",
+    "donationMessage": "The donation of €{{amount}} via {{method}} is not yet functional. Thank you for your intention!"
+  },
+  "gallery": {
+    "title": "Image Gallery"
+  },
+  "blog": {
+    "title": "Our Blog",
+    "loading": "Loading articles...",
+    "errorTitle": "Loading Error",
+    "errorMessage": "An error occurred: {{error}}",
+    "retryButton": "Retry",
+    "byAuthorOnDate": "By {{author}} on {{date}}",
+    "readMore": "Read more"
+  },
+  "projects": {
+    "title": "All Our Projects",
+    "loading": "Loading projects...",
+    "errorTitle": "Loading Error",
+    "errorMessage": "An error occurred: {{error}}",
+    "retryButton": "Retry",
+    "raised": "€{raised} raised",
+    "goal": "Goal: €{goal}",
+    "status": "Status: {status}"
+  },
+  "blogPost": {
+    "loading": "Loading article...",
+    "errorTitle": "Loading Error",
+    "errorMessage": "An error occurred: {{error}}",
+    "backToBlogButton": "Back to blog",
+    "byAuthorOnDate": "By {{author}} on {{date}}"
+  },
+  "projectDetail": {
+    "loading": "Loading project...",
+    "errorTitle": "Loading Error",
+    "errorMessage": "An error occurred: {{error}}",
+    "backToProjectsButton": "Back to projects",
+    "status": "Status: {{status}}",
+    "raised": "€{{amount}} raised",
+    "goal": "Goal: €{{amount}}",
+    "donateButton": "Donate to this project"
+  },
+  "footer": {
+    "logoAlt": "Blockchain BENIN Charity Logo",
+    "title": "Blockchain BENIN Charity",
+    "description": "Using blockchain technology for transparent and impactful humanitarian actions in Benin.",
+    "quickLinksTitle": "Quick Links",
+    "projectsLink": "Projects",
+    "blogLink": "Blog",
+    "aboutLink": "About",
+    "contactLink": "Contact",
+    "donateLink": "Donate",
+    "newsletterTitle": "Subscribe to our Newsletter",
+    "newsletterSuccess": "Thank you for subscribing!",
+    "newsletterPlaceholder": "Your email address",
+    "subscribeButton": "Subscribe",
+    "copyright": "&copy; 2025 Blockchain BENIN Charity. All rights reserved."
+  },
+  "partners": {
+    "title": "Our Trusted Partners"
+  },
+  "stats": {
+    "title": "Our Impact in Numbers"
+  }
+}

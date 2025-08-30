@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { blogPosts as mockBlogPosts } from '../data';
 
 const Blog = () => {
+  const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -41,7 +43,7 @@ const Blog = () => {
   if (loading) {
     return (
       <div className="container mx-auto p-8 font-sans text-center text-primary">
-        <h1 className="text-4xl font-bold mb-12">Chargement des articles...</h1>
+        <h1 className="text-4xl font-bold mb-12">{t('blog.loading')}</h1>
         <div className="flex justify-center items-center">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
         </div>
@@ -52,13 +54,13 @@ const Blog = () => {
   if (error) {
     return (
       <div className="container mx-auto p-8 font-sans text-center text-red-600">
-        <h1 className="text-4xl font-bold mb-12">Erreur de chargement</h1>
-        <p className="text-lg">Une erreur est survenue : {error}</p>
+        <h1 className="text-4xl font-bold mb-12">{t('blog.errorTitle')}</h1>
+        <p className="text-lg">{t('blog.errorMessage', { error })}</p>
         <button 
           onClick={() => window.location.reload()} 
           className="mt-8 inline-block bg-secondary hover:bg-primary text-white font-bold py-3 px-8 rounded-full transform hover:scale-105 transition-transform duration-300"
         >
-          Réessayer
+          {t('blog.retryButton')}
         </button>
       </div>
     );
@@ -72,7 +74,7 @@ const Blog = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        Notre Blog
+        {t('blog.title')}
       </motion.h1>
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
@@ -88,9 +90,9 @@ const Blog = () => {
           >
             <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-2xl font-bold mb-2 text-secondary">{post.title}</h2>
-              <p className="text-sm text-text-primary mb-4">Par {post.author} le {post.date}</p>
+              <p className="text-sm text-text-primary mb-4">{t('blog.byAuthorOnDate', { author: post.author, date: post.date })}</p>
               <p className="text-text-primary mb-4 flex-grow">{post.excerpt}</p>
-              <Link to={`/blog/${post.id}`} className="text-accent hover:text-green-700 font-bold self-start">Lire la suite</Link>
+              <Link to={`/blog/${post.id}`} className="text-accent hover:text-green-700 font-bold self-start">{t('blog.readMore')}</Link>
             </div>
           </motion.div>
         ))}

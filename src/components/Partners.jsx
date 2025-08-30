@@ -1,8 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { useTranslation } from 'react-i18next';
 import { partners } from '../data';
 
 const Partners = () => {
+  const { t } = useTranslation();
   const settings = {
     dots: false,
     infinite: true,
@@ -41,7 +43,7 @@ const Partners = () => {
   return (
     <div className="py-16 bg-light/50 backdrop-blur-sm">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Nos Partenaires de Confiance</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('partners.title')}</h2>
         <Slider {...settings}>
           {partners.map(partner => (
             <div key={partner.id} className="px-4">
